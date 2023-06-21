@@ -37,6 +37,11 @@ server.get('/api/getFormData', (req, res) => {
   }
 });
 
+server.delete('/clearData', (req, res) => {
+  router.db.setState({}); // Clear the database
+  res.sendStatus(200);
+});
+
 
 
 server.use(router);
