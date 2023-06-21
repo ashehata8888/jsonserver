@@ -31,7 +31,7 @@ server.get('/api/getFormData', (req, res) => {
   const formData = db.get('formData').value();
 
   if (formData.length > 0) {
-    res.json(formData[0]);
+    res.json(formData);
   } else {
     res.json({});
   }
