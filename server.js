@@ -30,7 +30,7 @@ server.get('/api/getFormData', (req, res) => {
   const db = router.db;
   const formData = db.get('formData').value();
 
-  if (formData.length > 0) {
+  if (formData?.length > 0) {
     res.json(formData);
   } else {
     res.json({});
